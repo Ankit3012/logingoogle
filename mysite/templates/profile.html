@@ -1,0 +1,16 @@
+<!-- profile.html -->
+
+{% load socialaccount %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Welcome, {{ user.username }}</h1>
+    <h3>Email: {{ user.email }}</h3>
+    <h3>Profile Picture:</h3>
+    <img src="{{ user.socialaccount_set.all.0.get_avatar_url }}" alt="Profile Picture" width="200" height="200">
+</body>
+</html>
